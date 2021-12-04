@@ -1,7 +1,7 @@
 ﻿
 namespace Newsparers.Forms
 {
-    partial class MainForm
+    partial class TableAgentsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,14 +31,6 @@ namespace Newsparers.Forms
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonChange = new System.Windows.Forms.Button();
-            this.buttonRemove = new System.Windows.Forms.Button();
-            this.buttonBack = new System.Windows.Forms.Button();
-            this.comboBoxFiltering = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBoxSort = new System.Windows.Forms.ComboBox();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.agentTypeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.agentTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -47,6 +39,14 @@ namespace Newsparers.Forms
             this.iNNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kPPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.agentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonChange = new System.Windows.Forms.Button();
+            this.buttonRemove = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
+            this.comboBoxFiltering = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.comboBoxSort = new System.Windows.Forms.ComboBox();
             this.checkBoxSort = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agentTypeBindingSource)).BeginInit();
@@ -72,96 +72,8 @@ namespace Newsparers.Forms
             this.dataGridView.ReadOnly = true;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(1007, 437);
-            this.dataGridView.TabIndex = 0;
+            this.dataGridView.TabIndex = 8;
             this.dataGridView.SelectionChanged += new System.EventHandler(this.OnSelectionChanging);
-            // 
-            // buttonAdd
-            // 
-            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.Location = new System.Drawing.Point(12, 485);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(142, 34);
-            this.buttonAdd.TabIndex = 1;
-            this.buttonAdd.Text = "Добавить";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            // 
-            // buttonChange
-            // 
-            this.buttonChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonChange.Location = new System.Drawing.Point(284, 485);
-            this.buttonChange.Name = "buttonChange";
-            this.buttonChange.Size = new System.Drawing.Size(142, 34);
-            this.buttonChange.TabIndex = 2;
-            this.buttonChange.Text = "Изменить";
-            this.buttonChange.UseVisualStyleBackColor = true;
-            // 
-            // buttonRemove
-            // 
-            this.buttonRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRemove.Location = new System.Drawing.Point(606, 485);
-            this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(142, 34);
-            this.buttonRemove.TabIndex = 3;
-            this.buttonRemove.Text = "Удалить";
-            this.buttonRemove.UseVisualStyleBackColor = true;
-            this.buttonRemove.Click += new System.EventHandler(this.RemoveSelectedRecords);
-            // 
-            // buttonBack
-            // 
-            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBack.Location = new System.Drawing.Point(877, 485);
-            this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(142, 34);
-            this.buttonBack.TabIndex = 4;
-            this.buttonBack.Text = "Назад";
-            this.buttonBack.UseVisualStyleBackColor = true;
-            this.buttonBack.Click += new System.EventHandler(this.CloseForm);
-            // 
-            // comboBoxFiltering
-            // 
-            this.comboBoxFiltering.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxFiltering.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxFiltering.FormattingEnabled = true;
-            this.comboBoxFiltering.Items.AddRange(new object[] {
-            "Все типы"});
-            this.comboBoxFiltering.Location = new System.Drawing.Point(106, 12);
-            this.comboBoxFiltering.Name = "comboBoxFiltering";
-            this.comboBoxFiltering.Size = new System.Drawing.Size(161, 24);
-            this.comboBoxFiltering.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Фильтрация";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(599, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Сортировка";
-            // 
-            // comboBoxSort
-            // 
-            this.comboBoxSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxSort.FormattingEnabled = true;
-            this.comboBoxSort.Items.AddRange(new object[] {
-            "Тип",
-            "Приоритет"});
-            this.comboBoxSort.Location = new System.Drawing.Point(692, 12);
-            this.comboBoxSort.Name = "comboBoxSort";
-            this.comboBoxSort.Size = new System.Drawing.Size(161, 24);
-            this.comboBoxSort.TabIndex = 8;
-            this.comboBoxSort.SelectedValueChanged += new System.EventHandler(this.SortChanged);
             // 
             // titleDataGridViewTextBoxColumn
             // 
@@ -231,6 +143,98 @@ namespace Newsparers.Forms
             // 
             this.agentBindingSource.DataSource = typeof(Newsparers.Model.Agent);
             // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAdd.Location = new System.Drawing.Point(12, 485);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(142, 34);
+            this.buttonAdd.TabIndex = 4;
+            this.buttonAdd.Text = "Добавить";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.AddAgent);
+            // 
+            // buttonChange
+            // 
+            this.buttonChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonChange.Location = new System.Drawing.Point(284, 485);
+            this.buttonChange.Name = "buttonChange";
+            this.buttonChange.Size = new System.Drawing.Size(142, 34);
+            this.buttonChange.TabIndex = 5;
+            this.buttonChange.Text = "Изменить";
+            this.buttonChange.UseVisualStyleBackColor = true;
+            this.buttonChange.Click += new System.EventHandler(this.ChangeAgent);
+            // 
+            // buttonRemove
+            // 
+            this.buttonRemove.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRemove.Location = new System.Drawing.Point(606, 485);
+            this.buttonRemove.Name = "buttonRemove";
+            this.buttonRemove.Size = new System.Drawing.Size(142, 34);
+            this.buttonRemove.TabIndex = 6;
+            this.buttonRemove.Text = "Удалить";
+            this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.RemoveSelectedRecords);
+            // 
+            // buttonBack
+            // 
+            this.buttonBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBack.Location = new System.Drawing.Point(877, 485);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(142, 34);
+            this.buttonBack.TabIndex = 7;
+            this.buttonBack.Text = "Назад";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.CloseForm);
+            // 
+            // comboBoxFiltering
+            // 
+            this.comboBoxFiltering.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxFiltering.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxFiltering.FormattingEnabled = true;
+            this.comboBoxFiltering.Items.AddRange(new object[] {
+            "Все типы"});
+            this.comboBoxFiltering.Location = new System.Drawing.Point(106, 12);
+            this.comboBoxFiltering.Name = "comboBoxFiltering";
+            this.comboBoxFiltering.Size = new System.Drawing.Size(161, 24);
+            this.comboBoxFiltering.TabIndex = 1;
+            this.comboBoxFiltering.SelectedValueChanged += new System.EventHandler(this.TableFiltering);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Фильтрация";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(599, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 16);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Сортировка";
+            // 
+            // comboBoxSort
+            // 
+            this.comboBoxSort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSort.FormattingEnabled = true;
+            this.comboBoxSort.Items.AddRange(new object[] {
+            "Нет",
+            "Тип",
+            "Приоритет"});
+            this.comboBoxSort.Location = new System.Drawing.Point(692, 12);
+            this.comboBoxSort.Name = "comboBoxSort";
+            this.comboBoxSort.Size = new System.Drawing.Size(161, 24);
+            this.comboBoxSort.TabIndex = 2;
+            this.comboBoxSort.SelectedValueChanged += new System.EventHandler(this.TableSort);
+            // 
             // checkBoxSort
             // 
             this.checkBoxSort.AutoSize = true;
@@ -238,11 +242,12 @@ namespace Newsparers.Forms
             this.checkBoxSort.Location = new System.Drawing.Point(859, 14);
             this.checkBoxSort.Name = "checkBoxSort";
             this.checkBoxSort.Size = new System.Drawing.Size(160, 20);
-            this.checkBoxSort.TabIndex = 10;
+            this.checkBoxSort.TabIndex = 3;
             this.checkBoxSort.Text = "В обратном порядке";
             this.checkBoxSort.UseVisualStyleBackColor = true;
+            this.checkBoxSort.CheckedChanged += new System.EventHandler(this.TableSort);
             // 
-            // MainForm
+            // TableAgentsForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1031, 531);
@@ -258,7 +263,7 @@ namespace Newsparers.Forms
             this.Controls.Add(this.dataGridView);
             this.MaximumSize = new System.Drawing.Size(1047, 570);
             this.MinimumSize = new System.Drawing.Size(1047, 570);
-            this.Name = "MainForm";
+            this.Name = "TableAgentsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Таблица «Агенты»";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
